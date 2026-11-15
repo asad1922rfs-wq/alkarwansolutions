@@ -1,0 +1,210 @@
+# ===================================================================
+# Al Karwan Solution FZC - .htaccess
+# ===================================================================
+
+Options -Indexes
+ServerSignature Off
+
+# ===================================================================
+# SECURITY HEADERS
+# ===================================================================
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ===================================================================
+# GZIP COMPRESSION
+# ===================================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/json image/svg+xml
+</IfModule>
+
+# ===================================================================
+# BROWSER CACHING
+# ===================================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/css "access plus 6 months"
+    ExpiresByType text/javascript "access plus 6 months"
+    ExpiresByType application/javascript "access plus 6 months"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ===================================================================
+# REWRITE ENGINE
+# ===================================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Force HTTPS (uncomment on live server)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Remove www (or add www - pick one)
+    # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    # RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+    # -----------------------------------------------------------------
+    # PREVENT DIRECT ACCESS TO .html FILES → redirect to clean URL
+    # -----------------------------------------------------------------
+    RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
+    RewriteRule ^ / [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /about\.html[\s?] [NC]
+    RewriteRule ^ /about-us/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /contact\.html[\s?] [NC]
+    RewriteRule ^ /contact-us/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /services\.html[\s?] [NC]
+    RewriteRule ^ /services/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /projects\.html[\s?] [NC]
+    RewriteRule ^ /projects/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /reviews\.html[\s?] [NC]
+    RewriteRule ^ /reviews/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /faq\.html[\s?] [NC]
+    RewriteRule ^ /faq/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog\.html[\s?] [NC]
+    RewriteRule ^ /blogs/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /outdoor-shade\.html[\s?] [NC]
+    RewriteRule ^ /vehicle-manufacturing/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /outdoor-shade-structures/?[\s?] [NC]
+    RewriteRule ^ /vehicle-manufacturing/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /privacy-policy\.html[\s?] [NC]
+    RewriteRule ^ /privacy-policy/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /terms-conditions\.html[\s?] [NC]
+    RewriteRule ^ /terms-conditions/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /cookie-policy\.html[\s?] [NC]
+    RewriteRule ^ /cookie-policy/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /thank-you\.html[\s?] [NC]
+    RewriteRule ^ /thank-you/ [L,R=301]
+
+    # Blog post HTML redirects
+    RewriteCond %{THE_REQUEST} /blog-galvalume\.html[\s?] [NC]
+    RewriteRule ^ /55-aluminum-zinc-coated-steel-galvalume/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-why-quality-tanks\.html[\s?] [NC]
+    RewriteRule ^ /why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-right-supplier\.html[\s?] [NC]
+    RewriteRule ^ /why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-complete-guide\.html[\s?] [NC]
+    RewriteRule ^ /complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-fire-tanks\.html[\s?] [NC]
+    RewriteRule ^ /fire-water-storage-tanks-in-uae-what-every-business-must-know/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-choosing-system\.html[\s?] [NC]
+    RewriteRule ^ /water-storage-tanks-in-uae-choosing-the-right-system/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-steel-tanks\.html[\s?] [NC]
+    RewriteRule ^ /steel-tanks-in-uae-the-strongest-choice-for-long-term-storage/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /grp-panel-water-tanks-in-uae-complete-guide\.html[\s?] [NC]
+    RewriteRule ^ /grp-panel-water-tanks-in-uae-complete-guide/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /water-tank-cleaning-disinfection-uae-guide\.html[\s?] [NC]
+    RewriteRule ^ /water-tank-cleaning-disinfection-uae-guide/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /water-tank-price-uae-cost-guide\.html[\s?] [NC]
+    RewriteRule ^ /water-tank-price-uae-cost-guide/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /gi-vs-zincalume-water-tanks-uae\.html[\s?] [NC]
+    RewriteRule ^ /gi-vs-zincalume-water-tanks-uae/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /underground-water-tanks-uae-guide\.html[\s?] [NC]
+    RewriteRule ^ /underground-water-tanks-uae-guide/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /water-tank-installation-process-uae\.html[\s?] [NC]
+    RewriteRule ^ /water-tank-installation-process-uae/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-custom-tank-manufacturing\.html[\s?] [NC]
+    RewriteRule ^ /custom-water-tank-manufacturing-sharjah/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-water-tank-replacement\.html[\s?] [NC]
+    RewriteRule ^ /water-tank-replacement-uae-signs/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-agricultural-water-tanks\.html[\s?] [NC]
+    RewriteRule ^ /agricultural-water-storage-tanks-uae/ [L,R=301]
+
+    RewriteCond %{THE_REQUEST} /blog-rooftop-water-tanks\.html[\s?] [NC]
+    RewriteRule ^ /rooftop-water-tanks-buildings-uae/ [L,R=301]
+
+    # -----------------------------------------------------------------
+    # CLEAN URL REWRITES (clean URL → HTML file)
+    # -----------------------------------------------------------------
+    RewriteRule ^about-us/?$ /about.html [L]
+    RewriteRule ^contact-us/?$ /contact.html [L]
+    RewriteRule ^services/?$ /services.html [L]
+    RewriteRule ^projects/?$ /projects.html [L]
+    RewriteRule ^reviews/?$ /reviews.html [L]
+    RewriteRule ^faq/?$ /faq.html [L]
+    RewriteRule ^blogs/?$ /blog.html [L]
+    RewriteRule ^vehicle-manufacturing/?$ /outdoor-shade.html [L]
+    RewriteRule ^privacy-policy/?$ /privacy-policy.html [L]
+    RewriteRule ^terms-conditions/?$ /terms-conditions.html [L]
+    RewriteRule ^cookie-policy/?$ /cookie-policy.html [L]
+    RewriteRule ^thank-you/?$ /thank-you.html [L]
+
+    # Blog post rewrites
+    RewriteRule ^55-aluminum-zinc-coated-steel-galvalume/?$ /blog-galvalume.html [L]
+    RewriteRule ^why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights/?$ /blog-why-quality-tanks.html [L]
+    RewriteRule ^why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution/?$ /blog-right-supplier.html [L]
+    RewriteRule ^complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution/?$ /blog-complete-guide.html [L]
+    RewriteRule ^fire-water-storage-tanks-in-uae-what-every-business-must-know/?$ /blog-fire-tanks.html [L]
+    RewriteRule ^water-storage-tanks-in-uae-choosing-the-right-system/?$ /blog-choosing-system.html [L]
+    RewriteRule ^steel-tanks-in-uae-the-strongest-choice-for-long-term-storage/?$ /blog-steel-tanks.html [L]
+    RewriteRule ^grp-panel-water-tanks-in-uae-complete-guide/?$ /grp-panel-water-tanks-in-uae-complete-guide.html [L]
+    RewriteRule ^water-tank-cleaning-disinfection-uae-guide/?$ /water-tank-cleaning-disinfection-uae-guide.html [L]
+    RewriteRule ^water-tank-price-uae-cost-guide/?$ /water-tank-price-uae-cost-guide.html [L]
+    RewriteRule ^gi-vs-zincalume-water-tanks-uae/?$ /gi-vs-zincalume-water-tanks-uae.html [L]
+    RewriteRule ^underground-water-tanks-uae-guide/?$ /underground-water-tanks-uae-guide.html [L]
+    RewriteRule ^water-tank-installation-process-uae/?$ /water-tank-installation-process-uae.html [L]
+    RewriteRule ^how-to-calculate-water-tank-size-uae/?$ /blog-water-tank-size-guide.html [L]
+    RewriteRule ^steel-vs-grp-vs-concrete-water-tanks-uae/?$ /blog-steel-vs-grp-vs-concrete.html [L]
+    RewriteRule ^insulated-water-tanks-uae-summer-heat-guide/?$ /blog-insulated-tanks-summer-heat.html [L]
+    RewriteRule ^industrial-water-storage-tanks-uae-labour-camps-factories/?$ /blog-industrial-water-storage.html [L]
+    RewriteRule ^custom-water-tank-manufacturing-sharjah/?$ /blog-custom-tank-manufacturing.html [L]
+    RewriteRule ^water-tank-replacement-uae-signs/?$ /blog-water-tank-replacement.html [L]
+    RewriteRule ^agricultural-water-storage-tanks-uae/?$ /blog-agricultural-water-tanks.html [L]
+    RewriteRule ^rooftop-water-tanks-buildings-uae/?$ /blog-rooftop-water-tanks.html [L]
+    
+
+</IfModule>
+
+# ===================================================================
+# BLOCK SENSITIVE FILES
+# ===================================================================
+<FilesMatch "\.(env|log|sql|bak|old|backup|git|ini|conf)$">
+    Require all denied
+</FilesMatch>
+

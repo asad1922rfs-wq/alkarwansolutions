@@ -1,0 +1,33 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Large backup archives (keep repo lightweight and under Vercel Hobby upload limits)
+alkarwan/*.zip
+*.zip
+
+# Local dev server & editor configs
+serve.ps1
+.claude/
+.vscode/
+.idea/
+
+# Obsolete / Duplicate files
+blog(1).html
+
+# Vercel & Node
+.vercel/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.*.local
+
+
+# PHP handler (old cPanel host only; contains secret, Vercel uses api/aks-submit.js)
+aks-submit.php
+
+# Large backup archive folder
+alkarwan/

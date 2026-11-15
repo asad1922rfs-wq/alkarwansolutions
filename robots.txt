@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /mail-handler.php
+Disallow: /thank-you/
+
+Sitemap: https://alkarwansolution.com/sitemap.xml
