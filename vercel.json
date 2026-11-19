@@ -6,126 +6,492 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" }
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
       ]
     },
     {
       "source": "/(images|css)/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/about.html", "destination": "/about-us/", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact-us/", "permanent": true },
-    { "source": "/services.html", "destination": "/services/", "permanent": true },
-    { "source": "/projects.html", "destination": "/projects/", "permanent": true },
-    { "source": "/reviews.html", "destination": "/reviews/", "permanent": true },
-    { "source": "/faq.html", "destination": "/faq/", "permanent": true },
-    { "source": "/blog.html", "destination": "/blogs/", "permanent": true },
-    { "source": "/outdoor-shade.html", "destination": "/vehicle-manufacturing/", "permanent": true },
-    { "source": "/outdoor-shade-structures", "destination": "/vehicle-manufacturing/", "permanent": true },
-    { "source": "/outdoor-shade-structures/", "destination": "/vehicle-manufacturing/", "permanent": true },
-    { "source": "/privacy-policy.html", "destination": "/privacy-policy/", "permanent": true },
-    { "source": "/terms-conditions.html", "destination": "/terms-conditions/", "permanent": true },
-    { "source": "/cookie-policy.html", "destination": "/cookie-policy/", "permanent": true },
-    { "source": "/thank-you.html", "destination": "/thank-you/", "permanent": true },
-    { "source": "/blog-galvalume.html", "destination": "/55-aluminum-zinc-coated-steel-galvalume/", "permanent": true },
-    { "source": "/blog-why-quality-tanks.html", "destination": "/why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights/", "permanent": true },
-    { "source": "/blog-right-supplier.html", "destination": "/why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution/", "permanent": true },
-    { "source": "/blog-complete-guide.html", "destination": "/complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution/", "permanent": true },
-    { "source": "/blog-fire-tanks.html", "destination": "/fire-water-storage-tanks-in-uae-what-every-business-must-know/", "permanent": true },
-    { "source": "/blog-choosing-system.html", "destination": "/water-storage-tanks-in-uae-choosing-the-right-system/", "permanent": true },
-    { "source": "/blog-steel-tanks.html", "destination": "/steel-tanks-in-uae-the-strongest-choice-for-long-term-storage/", "permanent": true },
-    { "source": "/grp-panel-water-tanks-in-uae-complete-guide.html", "destination": "/grp-panel-water-tanks-in-uae-complete-guide/", "permanent": true },
-    { "source": "/water-tank-cleaning-disinfection-uae-guide.html", "destination": "/water-tank-cleaning-disinfection-uae-guide/", "permanent": true },
-    { "source": "/water-tank-price-uae-cost-guide.html", "destination": "/water-tank-price-uae-cost-guide/", "permanent": true },
-    { "source": "/gi-vs-zincalume-water-tanks-uae.html", "destination": "/gi-vs-zincalume-water-tanks-uae/", "permanent": true },
-    { "source": "/underground-water-tanks-uae-guide.html", "destination": "/underground-water-tanks-uae-guide/", "permanent": true },
-    { "source": "/water-tank-installation-process-uae.html", "destination": "/water-tank-installation-process-uae/", "permanent": true },
-    { "source": "/blog-custom-tank-manufacturing.html", "destination": "/custom-water-tank-manufacturing-sharjah/", "permanent": true },
-    { "source": "/blog-water-tank-replacement.html", "destination": "/water-tank-replacement-uae-signs/", "permanent": true },
-    { "source": "/blog-agricultural-water-tanks.html", "destination": "/agricultural-water-storage-tanks-uae/", "permanent": true },
-    { "source": "/blog-rooftop-water-tanks.html", "destination": "/rooftop-water-tanks-buildings-uae/", "permanent": true },
-    { "source": "/blog-water-tank-size-guide.html", "destination": "/how-to-calculate-water-tank-size-uae/", "permanent": true },
-    { "source": "/blog-steel-vs-grp-vs-concrete.html", "destination": "/steel-vs-grp-vs-concrete-water-tanks-uae/", "permanent": true },
-    { "source": "/blog-insulated-tanks-summer-heat.html", "destination": "/insulated-water-tanks-uae-summer-heat-guide/", "permanent": true },
-    { "source": "/blog-industrial-water-storage.html", "destination": "/industrial-water-storage-tanks-uae-labour-camps-factories/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews.html",
+      "destination": "/reviews/",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blogs/",
+      "permanent": true
+    },
+    {
+      "source": "/outdoor-shade.html",
+      "destination": "/vehicle-manufacturing/",
+      "permanent": true
+    },
+    {
+      "source": "/outdoor-shade-structures",
+      "destination": "/vehicle-manufacturing/",
+      "permanent": true
+    },
+    {
+      "source": "/outdoor-shade-structures/",
+      "destination": "/vehicle-manufacturing/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-conditions.html",
+      "destination": "/terms-conditions/",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy.html",
+      "destination": "/cookie-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you.html",
+      "destination": "/thank-you/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-galvalume.html",
+      "destination": "/55-aluminum-zinc-coated-steel-galvalume/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-why-quality-tanks.html",
+      "destination": "/why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-right-supplier.html",
+      "destination": "/why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-complete-guide.html",
+      "destination": "/complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-fire-tanks.html",
+      "destination": "/fire-water-storage-tanks-in-uae-what-every-business-must-know/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-choosing-system.html",
+      "destination": "/water-storage-tanks-in-uae-choosing-the-right-system/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-steel-tanks.html",
+      "destination": "/steel-tanks-in-uae-the-strongest-choice-for-long-term-storage/",
+      "permanent": true
+    },
+    {
+      "source": "/grp-panel-water-tanks-in-uae-complete-guide.html",
+      "destination": "/grp-panel-water-tanks-in-uae-complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/water-tank-cleaning-disinfection-uae-guide.html",
+      "destination": "/water-tank-cleaning-disinfection-uae-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/water-tank-price-uae-cost-guide.html",
+      "destination": "/water-tank-price-uae-cost-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/gi-vs-zincalume-water-tanks-uae.html",
+      "destination": "/gi-vs-zincalume-water-tanks-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/underground-water-tanks-uae-guide.html",
+      "destination": "/underground-water-tanks-uae-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/water-tank-installation-process-uae.html",
+      "destination": "/water-tank-installation-process-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-custom-tank-manufacturing.html",
+      "destination": "/custom-water-tank-manufacturing-sharjah/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-water-tank-replacement.html",
+      "destination": "/water-tank-replacement-uae-signs/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-agricultural-water-tanks.html",
+      "destination": "/agricultural-water-storage-tanks-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-rooftop-water-tanks.html",
+      "destination": "/rooftop-water-tanks-buildings-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-water-tank-size-guide.html",
+      "destination": "/how-to-calculate-water-tank-size-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-steel-vs-grp-vs-concrete.html",
+      "destination": "/steel-vs-grp-vs-concrete-water-tanks-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-insulated-tanks-summer-heat.html",
+      "destination": "/insulated-water-tanks-uae-summer-heat-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-industrial-water-storage.html",
+      "destination": "/industrial-water-storage-tanks-uae-labour-camps-factories/",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/aks-submit.php", "destination": "/api/aks-submit" },
-    { "source": "/about-us", "destination": "/about.html" },
-    { "source": "/about-us/", "destination": "/about.html" },
-    { "source": "/contact-us", "destination": "/contact.html" },
-    { "source": "/contact-us/", "destination": "/contact.html" },
-    { "source": "/services", "destination": "/services.html" },
-    { "source": "/services/", "destination": "/services.html" },
-    { "source": "/projects", "destination": "/projects.html" },
-    { "source": "/projects/", "destination": "/projects.html" },
-    { "source": "/reviews", "destination": "/reviews.html" },
-    { "source": "/reviews/", "destination": "/reviews.html" },
-    { "source": "/faq", "destination": "/faq.html" },
-    { "source": "/faq/", "destination": "/faq.html" },
-    { "source": "/blogs", "destination": "/blog.html" },
-    { "source": "/blogs/", "destination": "/blog.html" },
-    { "source": "/vehicle-manufacturing", "destination": "/outdoor-shade.html" },
-    { "source": "/vehicle-manufacturing/", "destination": "/outdoor-shade.html" },
-    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
-    { "source": "/privacy-policy/", "destination": "/privacy-policy.html" },
-    { "source": "/terms-conditions", "destination": "/terms-conditions.html" },
-    { "source": "/terms-conditions/", "destination": "/terms-conditions.html" },
-    { "source": "/cookie-policy", "destination": "/cookie-policy.html" },
-    { "source": "/cookie-policy/", "destination": "/cookie-policy.html" },
-    { "source": "/thank-you", "destination": "/thank-you.html" },
-    { "source": "/thank-you/", "destination": "/thank-you.html" },
-    { "source": "/55-aluminum-zinc-coated-steel-galvalume", "destination": "/blog-galvalume.html" },
-    { "source": "/55-aluminum-zinc-coated-steel-galvalume/", "destination": "/blog-galvalume.html" },
-    { "source": "/why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights", "destination": "/blog-why-quality-tanks.html" },
-    { "source": "/why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights/", "destination": "/blog-why-quality-tanks.html" },
-    { "source": "/why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution", "destination": "/blog-right-supplier.html" },
-    { "source": "/why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution/", "destination": "/blog-right-supplier.html" },
-    { "source": "/complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution", "destination": "/blog-complete-guide.html" },
-    { "source": "/complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution/", "destination": "/blog-complete-guide.html" },
-    { "source": "/fire-water-storage-tanks-in-uae-what-every-business-must-know", "destination": "/blog-fire-tanks.html" },
-    { "source": "/fire-water-storage-tanks-in-uae-what-every-business-must-know/", "destination": "/blog-fire-tanks.html" },
-    { "source": "/water-storage-tanks-in-uae-choosing-the-right-system", "destination": "/blog-choosing-system.html" },
-    { "source": "/water-storage-tanks-in-uae-choosing-the-right-system/", "destination": "/blog-choosing-system.html" },
-    { "source": "/steel-tanks-in-uae-the-strongest-choice-for-long-term-storage", "destination": "/blog-steel-tanks.html" },
-    { "source": "/steel-tanks-in-uae-the-strongest-choice-for-long-term-storage/", "destination": "/blog-steel-tanks.html" },
-    { "source": "/grp-panel-water-tanks-in-uae-complete-guide", "destination": "/grp-panel-water-tanks-in-uae-complete-guide.html" },
-    { "source": "/grp-panel-water-tanks-in-uae-complete-guide/", "destination": "/grp-panel-water-tanks-in-uae-complete-guide.html" },
-    { "source": "/water-tank-cleaning-disinfection-uae-guide", "destination": "/water-tank-cleaning-disinfection-uae-guide.html" },
-    { "source": "/water-tank-cleaning-disinfection-uae-guide/", "destination": "/water-tank-cleaning-disinfection-uae-guide.html" },
-    { "source": "/water-tank-price-uae-cost-guide", "destination": "/water-tank-price-uae-cost-guide.html" },
-    { "source": "/water-tank-price-uae-cost-guide/", "destination": "/water-tank-price-uae-cost-guide.html" },
-    { "source": "/gi-vs-zincalume-water-tanks-uae", "destination": "/gi-vs-zincalume-water-tanks-uae.html" },
-    { "source": "/gi-vs-zincalume-water-tanks-uae/", "destination": "/gi-vs-zincalume-water-tanks-uae.html" },
-    { "source": "/underground-water-tanks-uae-guide", "destination": "/underground-water-tanks-uae-guide.html" },
-    { "source": "/underground-water-tanks-uae-guide/", "destination": "/underground-water-tanks-uae-guide.html" },
-    { "source": "/water-tank-installation-process-uae", "destination": "/water-tank-installation-process-uae.html" },
-    { "source": "/water-tank-installation-process-uae/", "destination": "/water-tank-installation-process-uae.html" },
-    { "source": "/how-to-calculate-water-tank-size-uae", "destination": "/blog-water-tank-size-guide.html" },
-    { "source": "/how-to-calculate-water-tank-size-uae/", "destination": "/blog-water-tank-size-guide.html" },
-    { "source": "/steel-vs-grp-vs-concrete-water-tanks-uae", "destination": "/blog-steel-vs-grp-vs-concrete.html" },
-    { "source": "/steel-vs-grp-vs-concrete-water-tanks-uae/", "destination": "/blog-steel-vs-grp-vs-concrete.html" },
-    { "source": "/insulated-water-tanks-uae-summer-heat-guide", "destination": "/blog-insulated-tanks-summer-heat.html" },
-    { "source": "/insulated-water-tanks-uae-summer-heat-guide/", "destination": "/blog-insulated-tanks-summer-heat.html" },
-    { "source": "/industrial-water-storage-tanks-uae-labour-camps-factories", "destination": "/blog-industrial-water-storage.html" },
-    { "source": "/industrial-water-storage-tanks-uae-labour-camps-factories/", "destination": "/blog-industrial-water-storage.html" },
-    { "source": "/custom-water-tank-manufacturing-sharjah", "destination": "/blog-custom-tank-manufacturing.html" },
-    { "source": "/custom-water-tank-manufacturing-sharjah/", "destination": "/blog-custom-tank-manufacturing.html" },
-    { "source": "/water-tank-replacement-uae-signs", "destination": "/blog-water-tank-replacement.html" },
-    { "source": "/water-tank-replacement-uae-signs/", "destination": "/blog-water-tank-replacement.html" },
-    { "source": "/agricultural-water-storage-tanks-uae", "destination": "/blog-agricultural-water-tanks.html" },
-    { "source": "/agricultural-water-storage-tanks-uae/", "destination": "/blog-agricultural-water-tanks.html" },
-    { "source": "/rooftop-water-tanks-buildings-uae", "destination": "/blog-rooftop-water-tanks.html" },
-    { "source": "/rooftop-water-tanks-buildings-uae/", "destination": "/blog-rooftop-water-tanks.html" }
+    {
+      "source": "/aks-submit.php",
+      "destination": "/api/aks-submit"
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about"
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact"
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact"
+    },
+    {
+      "source": "/services",
+      "destination": "/services"
+    },
+    {
+      "source": "/services/",
+      "destination": "/services"
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects"
+    },
+    {
+      "source": "/projects/",
+      "destination": "/projects"
+    },
+    {
+      "source": "/reviews",
+      "destination": "/reviews"
+    },
+    {
+      "source": "/reviews/",
+      "destination": "/reviews"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq"
+    },
+    {
+      "source": "/faq/",
+      "destination": "/faq"
+    },
+    {
+      "source": "/blogs",
+      "destination": "/blog"
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/blog"
+    },
+    {
+      "source": "/vehicle-manufacturing",
+      "destination": "/outdoor-shade"
+    },
+    {
+      "source": "/vehicle-manufacturing/",
+      "destination": "/outdoor-shade"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy"
+    },
+    {
+      "source": "/terms-conditions",
+      "destination": "/terms-conditions"
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "/terms-conditions"
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookie-policy"
+    },
+    {
+      "source": "/cookie-policy/",
+      "destination": "/cookie-policy"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you"
+    },
+    {
+      "source": "/thank-you/",
+      "destination": "/thank-you"
+    },
+    {
+      "source": "/55-aluminum-zinc-coated-steel-galvalume",
+      "destination": "/blog-galvalume"
+    },
+    {
+      "source": "/55-aluminum-zinc-coated-steel-galvalume/",
+      "destination": "/blog-galvalume"
+    },
+    {
+      "source": "/why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights",
+      "destination": "/blog-why-quality-tanks"
+    },
+    {
+      "source": "/why-high-quality-water-storage-tanks-matter-in-the-uae-alkarwan-solution-insights/",
+      "destination": "/blog-why-quality-tanks"
+    },
+    {
+      "source": "/why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution",
+      "destination": "/blog-right-supplier"
+    },
+    {
+      "source": "/why-choosing-the-right-water-storage-tank-supplier-in-uae-matters-al-karwan-solution/",
+      "destination": "/blog-right-supplier"
+    },
+    {
+      "source": "/complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution",
+      "destination": "/blog-complete-guide"
+    },
+    {
+      "source": "/complete-guide-to-water-storage-tanks-inuae-types-sizes-uses-by-alkarwansolution/",
+      "destination": "/blog-complete-guide"
+    },
+    {
+      "source": "/fire-water-storage-tanks-in-uae-what-every-business-must-know",
+      "destination": "/blog-fire-tanks"
+    },
+    {
+      "source": "/fire-water-storage-tanks-in-uae-what-every-business-must-know/",
+      "destination": "/blog-fire-tanks"
+    },
+    {
+      "source": "/water-storage-tanks-in-uae-choosing-the-right-system",
+      "destination": "/blog-choosing-system"
+    },
+    {
+      "source": "/water-storage-tanks-in-uae-choosing-the-right-system/",
+      "destination": "/blog-choosing-system"
+    },
+    {
+      "source": "/steel-tanks-in-uae-the-strongest-choice-for-long-term-storage",
+      "destination": "/blog-steel-tanks"
+    },
+    {
+      "source": "/steel-tanks-in-uae-the-strongest-choice-for-long-term-storage/",
+      "destination": "/blog-steel-tanks"
+    },
+    {
+      "source": "/grp-panel-water-tanks-in-uae-complete-guide",
+      "destination": "/grp-panel-water-tanks-in-uae-complete-guide"
+    },
+    {
+      "source": "/grp-panel-water-tanks-in-uae-complete-guide/",
+      "destination": "/grp-panel-water-tanks-in-uae-complete-guide"
+    },
+    {
+      "source": "/water-tank-cleaning-disinfection-uae-guide",
+      "destination": "/water-tank-cleaning-disinfection-uae-guide"
+    },
+    {
+      "source": "/water-tank-cleaning-disinfection-uae-guide/",
+      "destination": "/water-tank-cleaning-disinfection-uae-guide"
+    },
+    {
+      "source": "/water-tank-price-uae-cost-guide",
+      "destination": "/water-tank-price-uae-cost-guide"
+    },
+    {
+      "source": "/water-tank-price-uae-cost-guide/",
+      "destination": "/water-tank-price-uae-cost-guide"
+    },
+    {
+      "source": "/gi-vs-zincalume-water-tanks-uae",
+      "destination": "/gi-vs-zincalume-water-tanks-uae"
+    },
+    {
+      "source": "/gi-vs-zincalume-water-tanks-uae/",
+      "destination": "/gi-vs-zincalume-water-tanks-uae"
+    },
+    {
+      "source": "/underground-water-tanks-uae-guide",
+      "destination": "/underground-water-tanks-uae-guide"
+    },
+    {
+      "source": "/underground-water-tanks-uae-guide/",
+      "destination": "/underground-water-tanks-uae-guide"
+    },
+    {
+      "source": "/water-tank-installation-process-uae",
+      "destination": "/water-tank-installation-process-uae"
+    },
+    {
+      "source": "/water-tank-installation-process-uae/",
+      "destination": "/water-tank-installation-process-uae"
+    },
+    {
+      "source": "/how-to-calculate-water-tank-size-uae",
+      "destination": "/blog-water-tank-size-guide"
+    },
+    {
+      "source": "/how-to-calculate-water-tank-size-uae/",
+      "destination": "/blog-water-tank-size-guide"
+    },
+    {
+      "source": "/steel-vs-grp-vs-concrete-water-tanks-uae",
+      "destination": "/blog-steel-vs-grp-vs-concrete"
+    },
+    {
+      "source": "/steel-vs-grp-vs-concrete-water-tanks-uae/",
+      "destination": "/blog-steel-vs-grp-vs-concrete"
+    },
+    {
+      "source": "/insulated-water-tanks-uae-summer-heat-guide",
+      "destination": "/blog-insulated-tanks-summer-heat"
+    },
+    {
+      "source": "/insulated-water-tanks-uae-summer-heat-guide/",
+      "destination": "/blog-insulated-tanks-summer-heat"
+    },
+    {
+      "source": "/industrial-water-storage-tanks-uae-labour-camps-factories",
+      "destination": "/blog-industrial-water-storage"
+    },
+    {
+      "source": "/industrial-water-storage-tanks-uae-labour-camps-factories/",
+      "destination": "/blog-industrial-water-storage"
+    },
+    {
+      "source": "/custom-water-tank-manufacturing-sharjah",
+      "destination": "/blog-custom-tank-manufacturing"
+    },
+    {
+      "source": "/custom-water-tank-manufacturing-sharjah/",
+      "destination": "/blog-custom-tank-manufacturing"
+    },
+    {
+      "source": "/water-tank-replacement-uae-signs",
+      "destination": "/blog-water-tank-replacement"
+    },
+    {
+      "source": "/water-tank-replacement-uae-signs/",
+      "destination": "/blog-water-tank-replacement"
+    },
+    {
+      "source": "/agricultural-water-storage-tanks-uae",
+      "destination": "/blog-agricultural-water-tanks"
+    },
+    {
+      "source": "/agricultural-water-storage-tanks-uae/",
+      "destination": "/blog-agricultural-water-tanks"
+    },
+    {
+      "source": "/rooftop-water-tanks-buildings-uae",
+      "destination": "/blog-rooftop-water-tanks"
+    },
+    {
+      "source": "/rooftop-water-tanks-buildings-uae/",
+      "destination": "/blog-rooftop-water-tanks"
+    }
   ]
 }
